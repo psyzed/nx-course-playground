@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+body, html {
+  background-color: #0c0c12;
+  font-family: 'Fira Code';
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #E5DFCC;
+  flex-direction: column;
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  background-color: #090810;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  flex-direction: column;
+}
+button,a {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  &.primary {
+    border: 2px solid #ffc728;
+    color: #ffd834;
+    text-decoration: none;
+  }
+  &.secondary {
+    border: 2px solid #E5DFCC;
+    color: #E5DFCC;
+  }
+
+  &:hover {
+    background-color: rgba(#E5DFCC, 0.05);
+  }
+}
+.logo {
+  width: 200px;
+  display: block;
+  margin: -20px auto 0 auto;
+}
+app-root {
+  min-width: 200px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 2px solid #E5DFCC;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  li {
+    &.empty {
+      opacity: 0.5;
+      text-align: center;
+    }
+    width: 100%;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    &:hover {
+      background-color: rgba(#E5DFCC, 0.1);
+    }
+  }
+}
