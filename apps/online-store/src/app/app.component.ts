@@ -1,4 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject, signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 interface Course {
   id: string;
@@ -31,5 +33,9 @@ interface Course {
   `,
 })
 export class AppComponent {
-  courses = signal<Course[]>([]);
+  #http = inject(HttpClient);
+  courses = toSignal(
+    this.#http.get<Course[]>('/api/courses'),
+    { initialValue: [] },
+  );
 }
