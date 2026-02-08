@@ -12,7 +12,7 @@ interface Course {
     <section>
       <ul>
         @for (course of courses(); track course.id) {
-          <li>{{course.name}}</li>
+          <li>{{ course.name }}</li>
         } @empty {
           <li class="empty">No courses yet</li>
         }
@@ -20,7 +20,12 @@ interface Course {
     </section>
     @if (courses().length > 0) {
       <section class="buttons">
-        <a target="_blank" href="https://courses.decodedfrontend.io" class="primary">See All Courses</a>
+        <a
+          target="_blank"
+          href="https://courses.decodedfrontend.io"
+          class="primary"
+          >See All Courses</a
+        >
       </section>
     }
   `,
