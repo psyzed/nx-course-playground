@@ -1,0 +1,42 @@
+{
+  "name": "online-store-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "metadata": {
+    "description": "A demo REST API built on top of ExpressJS"
+  },
+  "projectType": "application",
+  "sourceRoot": "{projectRoot}/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "options": {
+        "main": "{projectRoot}/src/server.ts",
+        "tsConfig": "{projectRoot}/tsconfig.app.json",
+        "format": ["cjs"],
+        "bundle": false,
+        "generatePackageJson": true,
+        "outputFileName": "main.js",
+        "esbuildOptions": {
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "build"
+      },
+      "defaultConfiguration": "development",
+      "configurations": {
+        "development": {},
+        "production": {
+          "watch": false,
+          "inspect": false
+        }
+      },
+      "dependsOn": ["build"]
+    }
+  }
+}

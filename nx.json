@@ -1,0 +1,46 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "namedInputs": {
+    "sharedGlobals": [],
+    "default": ["sharedGlobals", "{projectRoot}/**/*"],
+    "production": [
+      "default",
+      "!{projectRoot}/eslint.config.cjs",
+      "!{projectRoot}/**/*.spec.[jt]s",
+      "!{projectRoot}/jest.config.ts"
+    ]
+  },
+  "targetDefaults": {
+    "lint": {
+      "cache": false
+    },
+    "@nx/esbuild:esbuild": {
+      "options": {
+        "outputPath": "{workspaceRoot}/dist/{projectRoot}"
+      },
+      "dependsOn": ["^build"],
+      "cache": true,
+      "inputs": ["production", "^production"]
+    }
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    },
+    {
+      "plugin": "@nx/angular/plugin",
+      "options": {
+        "targetNamePrefix": ""
+      }
+    }
+  ]
+}

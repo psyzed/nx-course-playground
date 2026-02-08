@@ -1,0 +1,21 @@
+dist
+node_modules
+coverage
+
+.nx/cache
+.nx/workspace-data
+
+**/.env*
+!**/.env*.example
+
+tmp
+.angular
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings

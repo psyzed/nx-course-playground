@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "target": "esnext",
+    "module": "CommonJS",
+    "paths": {
+      "@df/courses-controller": ["libs/courses-controller/src/index.ts"],
+      "@df/utils": ["libs/utils/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

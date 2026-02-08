@@ -1,0 +1,8 @@
+{
+  "name": "courses-controller",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/courses-controller/src",
+  "projectType": "library",
+  "// targets": "to see all targets run: nx show project courses-controller --web",
+  "targets": {}
+}
