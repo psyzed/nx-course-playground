@@ -2,6 +2,7 @@ export default {
   displayName: 'online-store',
   preset: '../../jest.preset.cjs',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
+  collectCoverage: true,
   coverageDirectory: '../../coverage/apps/online-store',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
@@ -13,9 +14,4 @@ export default {
     ],
   },
   transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
-  snapshotSerializers: [
-    'jest-preset-angular/build/serializers/no-ng-attributes',
-    'jest-preset-angular/build/serializers/ng-snapshot',
-    'jest-preset-angular/build/serializers/html-comment',
-  ],
 };

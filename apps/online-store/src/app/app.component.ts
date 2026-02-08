@@ -6,7 +6,7 @@ interface Course {
 }
 
 @Component({
-  selector: 'app-root',
+  selector: 'df-root',
   template: `
     <h1>Online Store | Courses</h1>
     <section>
