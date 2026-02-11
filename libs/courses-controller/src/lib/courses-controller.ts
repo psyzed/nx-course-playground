@@ -5,5 +5,6 @@ export const getCoursesController = (_: Request, res: Response) => {
   res.json([
     { id: getUUID(), name: 'Advanced Angular Forms Course' },
     { id: getUUID(), name: 'Conscious Angular Testing Course' },
+    { id: getUUID(), name: 'Nx Workspace Course' },
   ]);
 };
