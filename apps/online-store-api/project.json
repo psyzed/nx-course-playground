@@ -37,6 +37,14 @@
         }
       },
       "dependsOn": ["build"]
+    },
+    "docker-build": {
+      "dependsOn": ["build"],
+      "command": "docker build -f {projectRoot}/Dockerfile . -t {projectName} --platform=linux/amd64"
+    },
+    "docker-run": {
+      "dependsOn": ["docker-build"],
+      "command": "docker run -p 8080:8080 {projectName}"
     }
   }
 }

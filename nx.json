@@ -11,9 +11,6 @@
     ]
   },
   "targetDefaults": {
-    "lint": {
-      "cache": false
-    },
     "@nx/esbuild:esbuild": {
       "options": {
         "outputPath": "{workspaceRoot}/dist/{projectRoot}"
