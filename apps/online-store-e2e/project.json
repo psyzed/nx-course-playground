@@ -1,0 +1,6 @@
+{
+  "name": "online-store-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/online-store-e2e/src",
+  "implicitDependencies": ["online-store"]
+}
