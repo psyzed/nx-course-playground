@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import {  test, expect } from '@playwright/test';
 
 test('has title', async ({ request }) => {
   const response = await request.get('/api/courses');
