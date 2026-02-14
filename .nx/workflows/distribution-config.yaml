@@ -1,0 +1,13 @@
+distribute-on:
+  small-changeset: 3 linux-small-js
+  medium-changeset: 3 linux-medium-js
+  large-changeset: 5 decoded-js-agent
+
+assignment-rules:
+  - projects:
+    - online-store
+    targets:
+    - build
+    run-on:
+     -agent: linux-small-js
+
