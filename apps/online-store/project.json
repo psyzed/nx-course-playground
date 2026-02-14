@@ -7,7 +7,7 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:application",
+      "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/online-store",
@@ -50,7 +50,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@angular/build:dev-server",
       "options": {
         "proxyConfig": "apps/online-store/proxy.conf.json"
       },
@@ -63,10 +63,11 @@
         }
       },
       "defaultConfiguration": "development",
-      "continuous": true
+      "continuous": true,
+      "dependsOn": ["online-store-api:serve"]
     },
     "extract-i18n": {
-      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "executor": "@angular/build:extract-i18n",
       "options": {
         "buildTarget": "online-store:build"
       }

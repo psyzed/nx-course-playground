@@ -36,6 +36,7 @@
           "inspect": false
         }
       },
+      "continuous": true,
       "dependsOn": ["build"]
     },
     "docker-build": {
