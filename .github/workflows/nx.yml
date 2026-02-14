@@ -42,12 +42,12 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and push Docker image
-        run: |
-          npx nx run api:docker-build --no-agents
-      - name: Deploy the application
-        uses: digitalocean/app-action/deploy@v2
-        with:
-          app_id: ${{ secrets.DIGITALOCEAN_APP_ID }}
-          token: ${{ secrets.DIGITALOCEAN_API_TOKEN }}
-          app_name: 'nx-course-playground'
+      # - name: Build and push Docker image
+        # run: |
+          # npx nx run api:docker-build --no-agents
+      # - name: Deploy the application
+        # uses: digitalocean/app-action/deploy@v2
+        # with:
+          # app_id: ${{ secrets.DIGITALOCEAN_APP_ID }}
+          # token: ${{ secrets.DIGITALOCEAN_API_TOKEN }}
+          # app_name: 'nx-course-playground'
